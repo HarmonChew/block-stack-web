@@ -86,6 +86,12 @@ export class Game {
     return this.mod._arena_lines(this.handle);
   }
 
+  /** Just the 200 board cells (active piece drawn in), for line-clear animations. */
+  board(): Uint8Array {
+    this.mod._arena_view(this.handle, this.viewPointer);
+    return this.mod.HEAPU8.slice(this.viewPointer, this.viewPointer + 200);
+  }
+
   view(): View {
     this.mod._arena_view(this.handle, this.viewPointer);
     const bytes = this.mod.HEAPU8;

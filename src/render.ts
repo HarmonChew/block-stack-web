@@ -1,56 +1,81 @@
-// Canvas drawing for a board and its next-piece box, in the desktop client's colors.
-import { PHASE_LINE_CLEAR, type View } from "./engine.ts";
+// Canvas drawing: pixel blocks in the level palette, the NES-style line-clear wipe
+// and the top-out sweep.
+import type { View } from "./engine.ts";
+import { DEAD, WHITE, blockStyle, palette, type Palette } from "./palette.ts";
 
-const COLORS = ["#5bdce5", "#649bf4", "#ffb15b", "#e9da6f", "#71d98e", "#be8dec", "#ee7491"];
-const BOARD_BG = "#060d16";
-const GRID = "rgba(48, 69, 79, 0.37)";
+const WELL = "#05060a";
 
-function fitCanvas(canvas: HTMLCanvasElement, columns: number, rows: number): number {
+export interface BoardFx {
+  hidden?: boolean; // paused: show an empty well
+  clear?: { board: Uint8Array; rows: number; step: number; flash: boolean }; // step 0-5
+  dead?: number; // top-out sweep, 0-1
+}
+
+/** Sizes the canvas to whole device pixels per cell inside its parent; returns the cell size. */
+export function fitCanvas(canvas: HTMLCanvasElement, columns: number, rows: number): number {
   const ratio = devicePixelRatio || 1;
-  const cell = Math.max(4, Math.floor((canvas.clientWidth * ratio) / columns));
+  const parent = canvas.parentElement!;
+  const cell = Math.max(3, Math.floor((parent.clientWidth * ratio) / columns));
   if (canvas.width !== cell * columns || canvas.height !== cell * rows) {
     canvas.width = cell * columns;
     canvas.height = cell * rows;
+    canvas.style.width = `${canvas.width / ratio}px`;
+    canvas.style.height = `${canvas.height / ratio}px`;
   }
   return cell;
 }
 
-function block(ctx: CanvasRenderingContext2D, x: number, y: number, size: number, piece: number): void {
-  const inset = Math.max(1, Math.round(size / 24));
-  ctx.fillStyle = COLORS[piece - 1] ?? "#8fa3b1";
-  ctx.fillRect(x + inset, y + inset, size - 2 * inset, size - 2 * inset);
-  ctx.fillStyle = "rgba(255, 255, 255, 0.3)";
-  ctx.fillRect(x + size * 0.16, y + size * 0.16, size * 0.68, Math.max(1, size * 0.12));
-  ctx.fillStyle = "rgba(0, 0, 0, 0.18)";
-  ctx.fillRect(x + size * 0.8, y + size * 0.16, Math.max(1, size * 0.08), size * 0.68);
+function rect(ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h: number): void {
+  const left = Math.round(x);
+  const top = Math.round(y);
+  ctx.fillRect(left, top, Math.round(x + w) - left, Math.round(y + h) - top);
 }
 
-export function drawBoard(canvas: HTMLCanvasElement, view: View, hidden = false): void {
+/** One block on an 8x8 pixel grid: 7x7 body, a shine in the top left, a 1px gap. */
+export function drawBlock(ctx: CanvasRenderingContext2D, x: number, y: number, size: number,
+                          style: number, colours: Palette, dead = false): void {
+  const u = size / 8;
+  if (dead) {
+    ctx.fillStyle = DEAD;
+    rect(ctx, x, y, 7 * u, 7 * u);
+    ctx.fillStyle = "#2b2f3a";
+    rect(ctx, x + 2 * u, y + 2 * u, 3 * u, 3 * u);
+    return;
+  }
+  ctx.fillStyle = style === 2 ? colours.b : colours.a;
+  rect(ctx, x, y, 7 * u, 7 * u);
+  ctx.fillStyle = WHITE;
+  if (style === 0) {
+    rect(ctx, x + u, y + u, 5 * u, 5 * u);
+    rect(ctx, x, y, u, u);
+  } else {
+    rect(ctx, x, y, u, u);
+    rect(ctx, x + u, y + u, 2 * u, u);
+    rect(ctx, x + u, y + 2 * u, u, u);
+  }
+}
+
+export function drawBoard(canvas: HTMLCanvasElement, view: View, fx: BoardFx = {}): void {
   const cell = fitCanvas(canvas, 10, 20);
   const ctx = canvas.getContext("2d")!;
-  ctx.fillStyle = BOARD_BG;
+  ctx.fillStyle = WELL;
   ctx.fillRect(0, 0, canvas.width, canvas.height);
-  ctx.strokeStyle = GRID;
-  ctx.lineWidth = 1;
-  ctx.beginPath();
-  for (let x = 1; x < 10; x++) {
-    ctx.moveTo(x * cell + 0.5, 0);
-    ctx.lineTo(x * cell + 0.5, canvas.height);
-  }
-  for (let y = 1; y < 20; y++) {
-    ctx.moveTo(0, y * cell + 0.5);
-    ctx.lineTo(canvas.width, y * cell + 0.5);
-  }
-  ctx.stroke();
-  if (hidden) return;
-  const flashing = view.phase === PHASE_LINE_CLEAR;
+  if (fx.hidden) return;
+  const colours = palette(view.level);
+  const clear = fx.clear;
+  const board = clear ? clear.board : view.board;
+  const deadRows = fx.dead === undefined ? -1 : Math.floor(fx.dead * 21) - 1;
   for (let y = 0; y < 20; y++) {
+    const clearing = clear !== undefined && (clear.rows & (1 << y)) !== 0;
     for (let x = 0; x < 10; x++) {
-      const piece = view.board[y * 10 + x];
-      if (piece) block(ctx, x * cell, y * cell, cell, piece);
+      const piece = board[y * 10 + x];
+      if (!piece) continue;
+      // The wipe opens from the centre: step k has removed columns 5-k .. 4+k.
+      if (clearing && x >= 5 - clear.step && x < 5 + clear.step) continue;
+      drawBlock(ctx, x * cell, y * cell, cell, blockStyle(piece - 1), colours, y <= deadRows);
     }
-    if (flashing && view.clearingRows & (1 << y)) {
-      ctx.fillStyle = "rgba(235, 245, 251, 0.55)";
+    if (clearing && clear.flash) {
+      ctx.fillStyle = "rgba(247, 244, 234, 0.55)";
       ctx.fillRect(0, y * cell, canvas.width, cell);
     }
   }
@@ -67,5 +92,8 @@ export function drawNext(canvas: HTMLCanvasElement, view: View): void {
   const height = Math.max(...ys) - Math.min(...ys) + 1;
   const left = (4 - width) / 2 - Math.min(...xs);
   const top = (2 - height) / 2 - Math.min(...ys);
-  for (const [x, y] of view.nextCells) block(ctx, (x + left) * cell, (y + top) * cell, cell, view.next + 1);
+  const colours = palette(view.level);
+  for (const [x, y] of view.nextCells) {
+    drawBlock(ctx, (x + left) * cell, (y + top) * cell, cell, blockStyle(view.next), colours);
+  }
 }

@@ -14,8 +14,17 @@ pieces as you.
   challenge links (`#c=<mode>.<level>.<bot>.<seed>`) to send a friend.
 
 Keyboard: arrows move and soft-drop, X or Up rotates right, Z rotates left, P
-pauses. Gamepads and on-screen touch buttons work too. Records live in the
-browser's localStorage.
+pauses. In the menus, arrows move the cursor, Enter or X picks, and Esc or Z goes
+back one screen. Gamepads (A picks, B goes back) and on-screen touch buttons work
+too. Records live in the browser's localStorage.
+
+The look takes its cues from NES-era stacking games without copying one: a title
+screen, one question per menu screen (Solo, or VS AI, then game type, then
+opponent), pixel type (Press Start 2P, SIL Open Font License, in `src/fonts/`),
+framed boxes, and block colours that change every level from ten palettes of our
+own (`src/palette.ts`). The opponent screen shows the chosen bot playing one of its
+recordings live. Sound effects are synthesized in `src/sound.ts`; there is no
+music. Everything honours `prefers-reduced-motion`.
 
 ## How it works
 

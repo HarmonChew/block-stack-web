@@ -1,0 +1,659 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-29T03:56:47Z",
+  "title": "Design System: Block Stack Arena",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Warm Ink",
+        "canonical": "#f7f4ea",
+        "tonalRamp": [
+          "#14120b",
+          "#2e2b24",
+          "#4a4840",
+          "#69665d",
+          "#89867d",
+          "#aaa89e",
+          "#cdcac1",
+          "#f1eee4"
+        ]
+      },
+      "ink-dim": {
+        "role": "neutral",
+        "displayName": "Dim Ink",
+        "canonical": "#b7bbcc",
+        "tonalRamp": [
+          "#0e111c",
+          "#282a38",
+          "#444755",
+          "#626574",
+          "#828595",
+          "#a3a7b7",
+          "#c6cadb",
+          "#eaeefe"
+        ]
+      },
+      "well": {
+        "role": "neutral",
+        "displayName": "Playfield Black",
+        "canonical": "#05060a",
+        "tonalRamp": [
+          "#101116",
+          "#292b31",
+          "#45474e",
+          "#64666c",
+          "#84868d",
+          "#a5a7af",
+          "#c8cad2",
+          "#eceef6"
+        ]
+      },
+      "win": {
+        "role": "tertiary",
+        "displayName": "Win Green",
+        "canonical": "#7be08f",
+        "tonalRamp": [
+          "#001705",
+          "#003612",
+          "#035722",
+          "#027b32",
+          "#359e51",
+          "#5cc172",
+          "#80e594",
+          "#c8ffd0"
+        ]
+      },
+      "lose": {
+        "role": "tertiary",
+        "displayName": "Lose Coral",
+        "canonical": "#ff6b7a",
+        "tonalRamp": [
+          "#2a0006",
+          "#570015",
+          "#890327",
+          "#b6243f",
+          "#dd4c5e",
+          "#fe7682",
+          "#ffb3b6",
+          "#ffe8e9"
+        ]
+      },
+      "dead-stack": {
+        "role": "neutral",
+        "displayName": "Dead Stack",
+        "canonical": "#545a6b",
+        "tonalRamp": [
+          "#0d111e",
+          "#262b3a",
+          "#414758",
+          "#5f6677",
+          "#7f8698",
+          "#a0a7ba",
+          "#c3cade",
+          "#e8eefe"
+        ]
+      },
+      "dead-core": {
+        "role": "neutral",
+        "displayName": "Dead Core",
+        "canonical": "#2b2f3a",
+        "tonalRamp": [
+          "#0e111b",
+          "#272b36",
+          "#434753",
+          "#616672",
+          "#818693",
+          "#a2a7b5",
+          "#c5cad8",
+          "#e9eefd"
+        ]
+      },
+      "royal-blue": {
+        "role": "primary",
+        "displayName": "Royal Blue (level 0 A)",
+        "canonical": "#3b6cf6",
+        "tonalRamp": [
+          "#010047",
+          "#05018b",
+          "#0f2fb8",
+          "#2955de",
+          "#497bff",
+          "#7ea5fe",
+          "#b2cafe",
+          "#e7efff"
+        ]
+      },
+      "amber": {
+        "role": "secondary",
+        "displayName": "Amber (level 0 B)",
+        "canonical": "#f5a524",
+        "tonalRamp": [
+          "#1c0e00",
+          "#3d2601",
+          "#633f02",
+          "#8b5a02",
+          "#b67700",
+          "#e29509",
+          "#ffbc63",
+          "#feebd4"
+        ]
+      },
+      "jade": {
+        "role": "primary",
+        "displayName": "Jade (level 1 A)",
+        "canonical": "#14a76c",
+        "tonalRamp": [
+          "#01170b",
+          "#01351f",
+          "#005635",
+          "#047a4d",
+          "#039f66",
+          "#41c386",
+          "#6ae7a8",
+          "#c3ffdc"
+        ]
+      },
+      "lime": {
+        "role": "secondary",
+        "displayName": "Lime (level 1 B)",
+        "canonical": "#c3e956",
+        "tonalRamp": [
+          "#0e1400",
+          "#253000",
+          "#3f4f02",
+          "#5a7000",
+          "#779304",
+          "#95b809",
+          "#b7dc47",
+          "#dcff86"
+        ]
+      },
+      "raspberry": {
+        "role": "primary",
+        "displayName": "Raspberry (level 2 A)",
+        "canonical": "#d8366f",
+        "tonalRamp": [
+          "#29000d",
+          "#550024",
+          "#86003c",
+          "#ba0a57",
+          "#e14076",
+          "#fe7299",
+          "#ffb1c3",
+          "#fee8ec"
+        ]
+      },
+      "sun": {
+        "role": "secondary",
+        "displayName": "Sun (level 2 B)",
+        "canonical": "#ffcf5c",
+        "tonalRamp": [
+          "#191000",
+          "#382900",
+          "#5b4400",
+          "#806102",
+          "#a78006",
+          "#cfa020",
+          "#f3c34f",
+          "#feedc6"
+        ]
+      },
+      "violet": {
+        "role": "primary",
+        "displayName": "Violet (level 3 A)",
+        "canonical": "#7646e8",
+        "tonalRamp": [
+          "#150039",
+          "#310174",
+          "#5002b4",
+          "#6d39dc",
+          "#8a62fe",
+          "#a895ff",
+          "#c9c2ff",
+          "#eeecff"
+        ]
+      },
+      "aqua": {
+        "role": "secondary",
+        "displayName": "Aqua (level 3 B)",
+        "canonical": "#3fd8c8",
+        "tonalRamp": [
+          "#011613",
+          "#01332e",
+          "#05534c",
+          "#06766c",
+          "#049b8e",
+          "#12c1b2",
+          "#51e5d5",
+          "#b9fff4"
+        ]
+      },
+      "vermilion": {
+        "role": "primary",
+        "displayName": "Vermilion (level 4 A)",
+        "canonical": "#e8572a",
+        "tonalRamp": [
+          "#260500",
+          "#511200",
+          "#7f2301",
+          "#b23300",
+          "#e04f21",
+          "#ff7b55",
+          "#feb7a2",
+          "#fee9e3"
+        ]
+      },
+      "lemon": {
+        "role": "secondary",
+        "displayName": "Lemon (level 4 B)",
+        "canonical": "#f7e26b",
+        "tonalRamp": [
+          "#161200",
+          "#322b02",
+          "#534801",
+          "#756604",
+          "#998700",
+          "#bda827",
+          "#e1cc53",
+          "#fff09f"
+        ]
+      },
+      "teal": {
+        "role": "primary",
+        "displayName": "Teal (level 5 A)",
+        "canonical": "#0e93a8",
+        "tonalRamp": [
+          "#011519",
+          "#00323a",
+          "#04515d",
+          "#047384",
+          "#1696ab",
+          "#49b9ce",
+          "#70ddf3",
+          "#d1f6ff"
+        ]
+      },
+      "rose": {
+        "role": "secondary",
+        "displayName": "Rose (level 5 B)",
+        "canonical": "#ff8fb1",
+        "tonalRamp": [
+          "#29000f",
+          "#550027",
+          "#7f1943",
+          "#a33c61",
+          "#c85e80",
+          "#ee80a2",
+          "#feb1c6",
+          "#fee8ed"
+        ]
+      },
+      "crimson": {
+        "role": "primary",
+        "displayName": "Crimson (level 6 A)",
+        "canonical": "#b8324b",
+        "tonalRamp": [
+          "#290007",
+          "#570018",
+          "#89002b",
+          "#b22c46",
+          "#d85165",
+          "#ff7586",
+          "#feb3b8",
+          "#fee8e9"
+        ]
+      },
+      "sky": {
+        "role": "secondary",
+        "displayName": "Sky (level 6 B)",
+        "canonical": "#8fc7ff",
+        "tonalRamp": [
+          "#001227",
+          "#012d50",
+          "#114a7a",
+          "#346a9c",
+          "#558bbf",
+          "#76ade3",
+          "#a1d0ff",
+          "#e2f0ff"
+        ]
+      },
+      "moss": {
+        "role": "primary",
+        "displayName": "Moss (level 7 A)",
+        "canonical": "#3f8f3a",
+        "tonalRamp": [
+          "#001800",
+          "#003600",
+          "#035802",
+          "#287a24",
+          "#4c9b46",
+          "#6ebe68",
+          "#91e28a",
+          "#ccffc7"
+        ]
+      },
+      "apricot": {
+        "role": "secondary",
+        "displayName": "Apricot (level 7 B)",
+        "canonical": "#ffb072",
+        "tonalRamp": [
+          "#1f0c00",
+          "#442100",
+          "#6c3801",
+          "#985102",
+          "#bc7232",
+          "#e09356",
+          "#ffba85",
+          "#feeadc"
+        ]
+      },
+      "indigo": {
+        "role": "primary",
+        "displayName": "Indigo (level 8 A)",
+        "canonical": "#4f55e0",
+        "tonalRamp": [
+          "#0a0042",
+          "#1e0182",
+          "#3228b3",
+          "#4a4ed9",
+          "#6673ff",
+          "#8f9ffe",
+          "#bbc7ff",
+          "#eaeeff"
+        ]
+      },
+      "pink": {
+        "role": "secondary",
+        "displayName": "Pink (level 8 B)",
+        "canonical": "#ff7ac1",
+        "tonalRamp": [
+          "#270017",
+          "#520035",
+          "#810155",
+          "#aa2a76",
+          "#d04f97",
+          "#f672b9",
+          "#ffafd5",
+          "#fee7f1"
+        ]
+      },
+      "brass": {
+        "role": "primary",
+        "displayName": "Brass (level 9 A)",
+        "canonical": "#a9762a",
+        "tonalRamp": [
+          "#1c0e00",
+          "#3d2601",
+          "#633f01",
+          "#8b5b01",
+          "#ae7b30",
+          "#d29c54",
+          "#f6bf77",
+          "#ffebd3"
+        ]
+      },
+      "mint": {
+        "role": "secondary",
+        "displayName": "Mint (level 9 B)",
+        "canonical": "#67e0a3",
+        "tonalRamp": [
+          "#00170b",
+          "#00351f",
+          "#035635",
+          "#027a4d",
+          "#0a9f66",
+          "#45c287",
+          "#6ee6a9",
+          "#c3ffdc"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The ARENA band under the logo only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Dialog titles: result and pause."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Screen plates, large options, player tags, status line, stat values, level numbers (14px on phones)."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Default text and explanations; details run at line-height 1.9 in Dim Ink."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Names of values (SCORE, NEXT, LEVEL), option sub-lines, status title, toasts. Names a value; never introduces a heading."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-expo-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Eased layout motion: screen slides, dialog drop-in, count-in, tally rows, cursor slide-in, stat bump."
+      },
+      {
+        "name": "step-pixel",
+        "value": "steps(1)",
+        "purpose": "Anything built of pixels switches on and off: cursor nudge (0.8s loop), PRESS START blink (1.06s), level-cell flash (0.5s), Tetris flash (0.36s), shake (0.28s), NEW BEST blink (0.5s x 6)."
+      },
+      {
+        "name": "screen-slide",
+        "value": "240ms ease-expo-out, translateX(40px), forward right-to-left, back left-to-right",
+        "purpose": "Menu-to-menu steps."
+      },
+      {
+        "name": "block-wipe",
+        "value": "cover 300ms (stack rises, 44px blocks, 32px under 640px), white flash and swap, reveal 320ms (rows clear from the centre in 5 steps)",
+        "purpose": "Signature screen change into and out of the match, and from the title."
+      },
+      {
+        "name": "palette-shift",
+        "value": "0.6s ease on --ground, --pa, --pb (registered @property)",
+        "purpose": "Level-up and screen-to-screen palette change."
+      },
+      {
+        "name": "logo-build",
+        "value": "pieces fall 340ms each, 55ms stagger, lowest first; ARENA band opens from the centre 0.5s; palette cycles every 3.5s with a 600ms diagonal sweep",
+        "purpose": "Title assembly and idle recolour."
+      },
+      {
+        "name": "line-clear",
+        "value": "columns removed from the centre in steps of 4 frames",
+        "purpose": "Board clears, with a Tetris flash alternating per step."
+      },
+      {
+        "name": "top-out-sweep",
+        "value": "800ms, dead-stack grey from the top row down",
+        "purpose": "Game over on a board."
+      },
+      {
+        "name": "count-in",
+        "value": "320ms scale 1.9 to 1 with fade",
+        "purpose": "Countdown numbers."
+      },
+      {
+        "name": "pop-rise",
+        "value": "1.4s, rises 140% while fading, 0.5 to 1 scale at start",
+        "purpose": "Line and level pop text over a well."
+      },
+      {
+        "name": "score-roll",
+        "value": "700ms cubic ease-out count-up (result); live score eases at 9x per second",
+        "purpose": "Result tally and HUD score."
+      },
+      {
+        "name": "block-rain",
+        "value": "90 palette blocks, gravity 0.25, 3s with 0.6s fade",
+        "purpose": "Win celebration."
+      },
+      {
+        "name": "ground-drift",
+        "value": "40s linear, tile scrolls 160 pixel units downward; off in matches",
+        "purpose": "Idle life behind menus."
+      },
+      {
+        "name": "press",
+        "value": "translateY(var(--px)) on :active",
+        "purpose": "One-pixel press on icon buttons, pads and discs."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "prefers-reduced-motion: reduce",
+        "purpose": "Drift, cursor nudge, blink, cell flash and shake stop; slides, dialog, tally, count-in and bump become 0.16s fades; wipe, block rain and palette cycling are skipped; Tetris flash shortens to 0.2s."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "phone",
+        "value": "max-width: 720px (pixel unit 2px, stacked boards, touch pad bar on touch devices)"
+      },
+      {
+        "name": "wipe-cell",
+        "value": "innerWidth < 640px (32px wipe blocks instead of 44px)"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Frame card",
+      "kind": "card",
+      "refersTo": "frame",
+      "description": "The one container: level-coloured notched pixel frame around a near-black fill.",
+      "html": "<div class=\"ds-frame\"><p class=\"ds-frame-text\">Level 8: pieces fall a row every 8 frames.</p></div>",
+      "css": ".ds-frame{border:calc(var(--px,3px)*3) solid transparent;border-image:var(--frame,url(\"data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'9'%20height%3D'9'%20viewBox%3D'0%200%209%209'%20shape-rendering%3D'crispEdges'%3E%3Cpath%20fill%3D'%233b6cf6'%20d%3D'M1%200h7v1H1zM0%201h1v7H0zM8%201h1v7H8zM1%208h7v1H1z'%2F%3E%3Cpath%20fill%3D'%23f7f4ea'%20d%3D'M1%201h7v1H1zM1%202h1v5H1zM7%202h1v5H7zM1%207h7v1H1z'%2F%3E%3Cpath%20fill%3D'%233b6cf6'%20d%3D'M2%202h5v1H2zM2%203h1v3H2zM6%203h1v3H6zM2%206h5v1H2z'%2F%3E%3Crect%20x%3D'3'%20y%3D'3'%20width%3D'3'%20height%3D'3'%20fill%3D'%2305060a'%20fill-opacity%3D'.92'%2F%3E%3C%2Fsvg%3E\")) 3 fill / calc(var(--px,3px)*3) stretch;}.ds-frame{padding:20px 24px;max-width:360px;color:var(--ink,#f7f4ea);font:12px/1.9 'Press Start 2P',ui-monospace,monospace;}.ds-frame-text{margin:0;color:var(--ink-dim,#b7bbcc);}"
+    },
+    {
+      "name": "Screen plate",
+      "kind": "custom",
+      "refersTo": "plate",
+      "description": "A frame holding a single screen title, centred above its card.",
+      "html": "<h2 class=\"ds-plate\">MAIN MENU</h2>",
+      "css": ".ds-plate{border:calc(var(--px,3px)*3) solid transparent;border-image:var(--frame,url(\"data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'9'%20height%3D'9'%20viewBox%3D'0%200%209%209'%20shape-rendering%3D'crispEdges'%3E%3Cpath%20fill%3D'%233b6cf6'%20d%3D'M1%200h7v1H1zM0%201h1v7H0zM8%201h1v7H8zM1%208h7v1H1z'%2F%3E%3Cpath%20fill%3D'%23f7f4ea'%20d%3D'M1%201h7v1H1zM1%202h1v5H1zM7%202h1v5H7zM1%207h7v1H1z'%2F%3E%3Cpath%20fill%3D'%233b6cf6'%20d%3D'M2%202h5v1H2zM2%203h1v3H2zM6%203h1v3H6zM2%206h5v1H2z'%2F%3E%3Crect%20x%3D'3'%20y%3D'3'%20width%3D'3'%20height%3D'3'%20fill%3D'%2305060a'%20fill-opacity%3D'.92'%2F%3E%3C%2Fsvg%3E\")) 3 fill / calc(var(--px,3px)*3) stretch;}.ds-plate{display:inline-block;margin:0;padding:8px 20px;font:400 16px/1.7 'Press Start 2P',ui-monospace,monospace;letter-spacing:.08em;color:var(--ink,#f7f4ea);}"
+    },
+    {
+      "name": "Menu option (current)",
+      "kind": "button",
+      "refersTo": "option",
+      "description": "A bare-word menu option with its sub-line; the arrow cursor and B colour mark the current one (hover, focus and arrow keys all set it).",
+      "html": "<button class=\"ds-option cur\" type=\"button\"><b style=\"font-weight:400\">VS AI</b><small>Race a bot on the same pieces.</small></button>",
+      "css": ".ds-option{position:relative;display:flex;flex-direction:column;gap:8px;padding:12px 12px 12px calc(var(--px,3px)*10);text-align:left;color:var(--ink,#f7f4ea);font:400 16px/1.7 'Press Start 2P',ui-monospace,monospace;letter-spacing:.04em;background:none;border:0;cursor:pointer;width:100%;max-width:360px;}.ds-option small{font-size:10px;line-height:1.8;color:var(--ink-dim,#b7bbcc);letter-spacing:0;}.ds-option::before{content:\"\";position:absolute;left:calc(var(--px,3px)*2);top:14px;width:calc(var(--px,3px)*5);height:calc(var(--px,3px)*7);background:var(--pb,#f5a524);-webkit-mask:url(\"data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'5'%20height%3D'7'%20viewBox%3D'0%200%205%207'%20shape-rendering%3D'crispEdges'%3E%3Cpath%20d%3D'M0%200h1v7H0zM1%201h1v5H1zM2%202h1v3H2zM3%203h1v1H3z'%2F%3E%3C%2Fsvg%3E\") no-repeat center/contain;mask:url(\"data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'5'%20height%3D'7'%20viewBox%3D'0%200%205%207'%20shape-rendering%3D'crispEdges'%3E%3Cpath%20d%3D'M0%200h1v7H0zM1%201h1v5H1zM2%202h1v3H2zM3%203h1v1H3z'%2F%3E%3C%2Fsvg%3E\") no-repeat center/contain;opacity:0;transform:translateX(-8px);transition:transform .16s cubic-bezier(.16,1,.3,1),opacity .1s;}.ds-option:hover,.ds-option:focus-visible,.ds-option.cur{color:var(--pb,#f5a524);outline:none;}.ds-option:hover::before,.ds-option:focus-visible::before,.ds-option.cur::before{opacity:1;transform:none;animation:ds-nudge .8s steps(1) infinite .2s;}@keyframes ds-nudge{50%{translate:var(--px,3px) 0;}}@media (prefers-reduced-motion:reduce){.ds-option.cur::before,.ds-option:hover::before,.ds-option:focus-visible::before{animation:none;}}"
+    },
+    {
+      "name": "Primary plate",
+      "kind": "button",
+      "refersTo": "option-primary",
+      "description": "The one action a screen exists for: a notched frame filled with Deep A (--pd, ink passes 5.2:1 on every palette), ink arrow.",
+      "html": "<button class=\"ds-primary cur\" type=\"button\">START</button>",
+      "css": ".ds-primary{position:relative;padding:10px 18px 10px calc(var(--px,3px)*10);font:400 16px/1.7 'Press Start 2P',ui-monospace,monospace;letter-spacing:.04em;color:var(--ink,#f7f4ea);cursor:pointer;border:calc(var(--px,3px)*3) solid transparent;border-image:var(--frame,url(\"data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'9'%20height%3D'9'%20viewBox%3D'0%200%209%209'%20shape-rendering%3D'crispEdges'%3E%3Cpath%20fill%3D'%233b6cf6'%20d%3D'M1%200h7v1H1zM0%201h1v7H0zM8%201h1v7H8zM1%208h7v1H1z'%2F%3E%3Cpath%20fill%3D'%23f7f4ea'%20d%3D'M1%201h7v1H1zM1%202h1v5H1zM7%202h1v5H7zM1%207h7v1H1z'%2F%3E%3Cpath%20fill%3D'%233b6cf6'%20d%3D'M2%202h5v1H2zM2%203h1v3H2zM6%203h1v3H6zM2%206h5v1H2z'%2F%3E%3Crect%20x%3D'3'%20y%3D'3'%20width%3D'3'%20height%3D'3'%20fill%3D'%2305060a'%20fill-opacity%3D'.92'%2F%3E%3C%2Fsvg%3E\")) 3 / calc(var(--px,3px)*3) stretch;background:var(--pd,#2a4aa6) padding-box;}.ds-primary::before{content:\"\";position:absolute;left:calc(var(--px,3px)*2);top:11px;width:calc(var(--px,3px)*5);height:calc(var(--px,3px)*7);background:var(--ink,#f7f4ea);-webkit-mask:url(\"data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'5'%20height%3D'7'%20viewBox%3D'0%200%205%207'%20shape-rendering%3D'crispEdges'%3E%3Cpath%20d%3D'M0%200h1v7H0zM1%201h1v5H1zM2%202h1v3H2zM3%203h1v1H3z'%2F%3E%3C%2Fsvg%3E\") no-repeat center/contain;mask:url(\"data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'5'%20height%3D'7'%20viewBox%3D'0%200%205%207'%20shape-rendering%3D'crispEdges'%3E%3Cpath%20d%3D'M0%200h1v7H0zM1%201h1v5H1zM2%202h1v3H2zM3%203h1v1H3z'%2F%3E%3C%2Fsvg%3E\") no-repeat center/contain;opacity:0;}.ds-primary:hover::before,.ds-primary:focus-visible::before,.ds-primary.cur::before{opacity:1;animation:ds-nudge2 .8s steps(1) infinite .2s;}.ds-primary:active{transform:translateY(var(--px,3px));}@keyframes ds-nudge2{50%{translate:var(--px,3px) 0;}}@media (prefers-reduced-motion:reduce){.ds-primary::before{animation:none!important;}}"
+    },
+    {
+      "name": "Level cell",
+      "kind": "custom",
+      "refersTo": "level-cell",
+      "description": "A solo-level tile previewing its own palette in three chips; the current cell outlines in B and flashes.",
+      "html": "<div style=\"display:flex;gap:8px\"><div class=\"ds-lv\" style=\"--ca:#3b6cf6;--cb:#f5a524\">7<span class=\"ds-chips\"><i></i><i></i><i></i></span></div><div class=\"ds-lv cur\" style=\"--ca:#4f55e0;--cb:#ff7ac1\">8<span class=\"ds-chips\"><i></i><i></i><i></i></span><small><svg class=\"ds-icon\" viewBox=\"0 0 7 7\" width=\"21\" height=\"21\" fill=\"currentColor\" shape-rendering=\"crispEdges\" aria-hidden=\"true\"><rect x=\"3\" y=\"0\" width=\"1\" height=\"1\"/><rect x=\"2\" y=\"1\" width=\"3\" height=\"1\"/><rect x=\"0\" y=\"2\" width=\"7\" height=\"1\"/><rect x=\"1\" y=\"3\" width=\"5\" height=\"1\"/><rect x=\"2\" y=\"4\" width=\"3\" height=\"1\"/><rect x=\"1\" y=\"5\" width=\"2\" height=\"1\"/><rect x=\"4\" y=\"5\" width=\"2\" height=\"1\"/><rect x=\"0\" y=\"6\" width=\"2\" height=\"1\"/><rect x=\"5\" y=\"6\" width=\"2\" height=\"1\"/></svg></small></div></div>",
+      "css": ".ds-lv{position:relative;display:flex;flex-direction:column;align-items:center;gap:8px;width:72px;padding:12px 4px 10px;font:400 16px/1.7 'Press Start 2P',ui-monospace,monospace;color:var(--ink,#f7f4ea);background:rgb(5 6 10/.6);outline:var(--px,3px) solid rgb(247 244 234/.12);outline-offset:calc(var(--px,3px)*-1);cursor:pointer;}.ds-lv:hover{outline-color:rgb(247 244 234/.4);}.ds-chips{display:flex;gap:var(--px,3px);}.ds-chips i{width:calc(var(--px,3px)*4);height:calc(var(--px,3px)*4);background:var(--ca);}.ds-chips i:first-child{background:var(--ink,#f7f4ea);box-shadow:inset 0 0 0 var(--px,3px) var(--ca);}.ds-chips i:last-child{background:var(--cb);}.ds-lv.cur{outline:var(--px,3px) solid var(--cb);color:var(--cb);background:rgb(247 244 234/.06);animation:ds-flash .5s steps(1) infinite;}@keyframes ds-flash{50%{outline-color:var(--ink,#f7f4ea);}}.ds-lv small{position:absolute;top:5px;right:5px;color:var(--cb);}.ds-lv small .ds-icon{width:calc(var(--px,3px)*3);height:auto;display:block;}@media (prefers-reduced-motion:reduce){.ds-lv.cur{animation:none;}}"
+    },
+    {
+      "name": "Icon button",
+      "kind": "button",
+      "refersTo": "icon-button",
+      "description": "A 44px framed pixel-icon button for back, pause and sound; text turns B on hover and sinks a pixel on press.",
+      "html": "<button class=\"ds-icon-btn\" type=\"button\" aria-label=\"Back\"><svg class=\"ds-icon\" viewBox=\"0 0 7 7\" width=\"21\" height=\"21\" fill=\"currentColor\" shape-rendering=\"crispEdges\" aria-hidden=\"true\"><rect x=\"3\" y=\"0\" width=\"1\" height=\"1\"/><rect x=\"2\" y=\"1\" width=\"2\" height=\"1\"/><rect x=\"1\" y=\"2\" width=\"6\" height=\"1\"/><rect x=\"0\" y=\"3\" width=\"7\" height=\"1\"/><rect x=\"1\" y=\"4\" width=\"6\" height=\"1\"/><rect x=\"2\" y=\"5\" width=\"2\" height=\"1\"/><rect x=\"3\" y=\"6\" width=\"1\" height=\"1\"/></svg></button> <button class=\"ds-icon-btn\" type=\"button\" aria-label=\"Pause\"><svg class=\"ds-icon\" viewBox=\"0 0 5 7\" width=\"15\" height=\"21\" fill=\"currentColor\" shape-rendering=\"crispEdges\" aria-hidden=\"true\"><rect x=\"0\" y=\"0\" width=\"2\" height=\"1\"/><rect x=\"3\" y=\"0\" width=\"2\" height=\"1\"/><rect x=\"0\" y=\"1\" width=\"2\" height=\"1\"/><rect x=\"3\" y=\"1\" width=\"2\" height=\"1\"/><rect x=\"0\" y=\"2\" width=\"2\" height=\"1\"/><rect x=\"3\" y=\"2\" width=\"2\" height=\"1\"/><rect x=\"0\" y=\"3\" width=\"2\" height=\"1\"/><rect x=\"3\" y=\"3\" width=\"2\" height=\"1\"/><rect x=\"0\" y=\"4\" width=\"2\" height=\"1\"/><rect x=\"3\" y=\"4\" width=\"2\" height=\"1\"/><rect x=\"0\" y=\"5\" width=\"2\" height=\"1\"/><rect x=\"3\" y=\"5\" width=\"2\" height=\"1\"/><rect x=\"0\" y=\"6\" width=\"2\" height=\"1\"/><rect x=\"3\" y=\"6\" width=\"2\" height=\"1\"/></svg></button>",
+      "css": ".ds-icon-btn{border:calc(var(--px,3px)*3) solid transparent;border-image:var(--frame,url(\"data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'9'%20height%3D'9'%20viewBox%3D'0%200%209%209'%20shape-rendering%3D'crispEdges'%3E%3Cpath%20fill%3D'%233b6cf6'%20d%3D'M1%200h7v1H1zM0%201h1v7H0zM8%201h1v7H8zM1%208h7v1H1z'%2F%3E%3Cpath%20fill%3D'%23f7f4ea'%20d%3D'M1%201h7v1H1zM1%202h1v5H1zM7%202h1v5H7zM1%207h7v1H1z'%2F%3E%3Cpath%20fill%3D'%233b6cf6'%20d%3D'M2%202h5v1H2zM2%203h1v3H2zM6%203h1v3H6zM2%206h5v1H2z'%2F%3E%3Crect%20x%3D'3'%20y%3D'3'%20width%3D'3'%20height%3D'3'%20fill%3D'%2305060a'%20fill-opacity%3D'.92'%2F%3E%3C%2Fsvg%3E\")) 3 fill / calc(var(--px,3px)*3) stretch;}.ds-icon-btn{display:inline-grid;place-items:center;min-width:44px;height:44px;padding:0 10px;color:var(--ink,#f7f4ea);background:none;cursor:pointer;transition:color .12s;}.ds-icon-btn:hover{color:var(--pb,#f5a524);}.ds-icon-btn:active{transform:translateY(var(--px,3px));}.ds-icon-btn .ds-icon{display:block;height:auto;}"
+    },
+    {
+      "name": "Stat box",
+      "kind": "card",
+      "refersTo": "stat-box",
+      "description": "A framed Label over a tabular Title value; changes bump the value.",
+      "html": "<div class=\"ds-stat\"><span class=\"ds-stat-label\">SCORE</span><b class=\"ds-stat-value\">1,520</b></div>",
+      "css": ".ds-stat{border:calc(var(--px,3px)*3) solid transparent;border-image:var(--frame,url(\"data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'9'%20height%3D'9'%20viewBox%3D'0%200%209%209'%20shape-rendering%3D'crispEdges'%3E%3Cpath%20fill%3D'%233b6cf6'%20d%3D'M1%200h7v1H1zM0%201h1v7H0zM8%201h1v7H8zM1%208h7v1H1z'%2F%3E%3Cpath%20fill%3D'%23f7f4ea'%20d%3D'M1%201h7v1H1zM1%202h1v5H1zM7%202h1v5H7zM1%207h7v1H1z'%2F%3E%3Cpath%20fill%3D'%233b6cf6'%20d%3D'M2%202h5v1H2zM2%203h1v3H2zM6%203h1v3H6zM2%206h5v1H2z'%2F%3E%3Crect%20x%3D'3'%20y%3D'3'%20width%3D'3'%20height%3D'3'%20fill%3D'%2305060a'%20fill-opacity%3D'.92'%2F%3E%3C%2Fsvg%3E\")) 3 fill / calc(var(--px,3px)*3) stretch;}.ds-stat{display:flex;flex-direction:column;gap:6px;width:150px;padding:6px 10px 8px;color:var(--ink,#f7f4ea);font-family:'Press Start 2P',ui-monospace,monospace;}.ds-stat-label{font-size:10px;color:var(--ink-dim,#b7bbcc);letter-spacing:.04em;}.ds-stat-value{font-weight:400;font-size:16px;font-variant-numeric:tabular-nums;}"
+    },
+    {
+      "name": "Lead meter",
+      "kind": "custom",
+      "refersTo": "lead-meter",
+      "description": "Twenty 3-pixel pips split 10 / 10; the lead lights outward from the centre in win green (right) or lose coral (left).",
+      "html": "<div class=\"ds-lead\"><i class=\"\"></i><i class=\"\"></i><i class=\"\"></i><i class=\"\"></i><i class=\"\"></i><i class=\"\"></i><i class=\"\"></i><i class=\"\"></i><i class=\"behind\"></i><i class=\"behind\"></i><i class=\"ahead\"></i><i class=\"ahead\"></i><i class=\"ahead\"></i><i class=\"\"></i><i class=\"\"></i><i class=\"\"></i><i class=\"\"></i><i class=\"\"></i><i class=\"\"></i><i class=\"\"></i></div>",
+      "css": ".ds-lead{display:flex;gap:2px;}.ds-lead i{width:calc(var(--px,3px)*3);height:calc(var(--px,3px)*3);background:rgb(247 244 234/.12);transition:background-color .15s;}.ds-lead i:nth-child(10){margin-right:calc(var(--px,3px)*2);}.ds-lead i.ahead{background:var(--win,#7be08f);}.ds-lead i.behind{background:var(--lose,#ff6b7a);}"
+    },
+    {
+      "name": "A / B pad discs",
+      "kind": "button",
+      "refersTo": "pad-disc",
+      "description": "Touch rotate buttons: a 14x14 stepped pixel disc, rim in A, face in B, white shine; pressing sinks one pixel.",
+      "html": "<div class=\"ds-ab\"><button class=\"ds-disc\" type=\"button\" aria-label=\"Rotate left\">B</button><button class=\"ds-disc up\" type=\"button\" aria-label=\"Rotate right\">A</button></div>",
+      "css": ".ds-ab{display:flex;gap:16px;align-items:flex-end;}.ds-disc{width:62px;height:62px;border:0;padding:0;background:var(--btn,url(\"data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'14'%20height%3D'14'%20viewBox%3D'0%200%2014%2014'%20shape-rendering%3D'crispEdges'%3E%3Crect%20x%3D'4'%20y%3D'0'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'5'%20y%3D'0'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'6'%20y%3D'0'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'7'%20y%3D'0'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'8'%20y%3D'0'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'9'%20y%3D'0'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'2'%20y%3D'1'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'3'%20y%3D'1'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'4'%20y%3D'1'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'5'%20y%3D'1'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'6'%20y%3D'1'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'7'%20y%3D'1'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'8'%20y%3D'1'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'9'%20y%3D'1'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'10'%20y%3D'1'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'11'%20y%3D'1'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'1'%20y%3D'2'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'2'%20y%3D'2'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'3'%20y%3D'2'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'4'%20y%3D'2'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'5'%20y%3D'2'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'6'%20y%3D'2'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'7'%20y%3D'2'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'8'%20y%3D'2'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'9'%20y%3D'2'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'10'%20y%3D'2'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'11'%20y%3D'2'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'12'%20y%3D'2'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'1'%20y%3D'3'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'2'%20y%3D'3'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'3'%20y%3D'3'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f7f4ea'%2F%3E%3Crect%20x%3D'4'%20y%3D'3'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f7f4ea'%2F%3E%3Crect%20x%3D'5'%20y%3D'3'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'6'%20y%3D'3'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'7'%20y%3D'3'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'8'%20y%3D'3'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'9'%20y%3D'3'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'10'%20y%3D'3'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'11'%20y%3D'3'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'12'%20y%3D'3'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'0'%20y%3D'4'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'1'%20y%3D'4'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'2'%20y%3D'4'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'3'%20y%3D'4'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f7f4ea'%2F%3E%3Crect%20x%3D'4'%20y%3D'4'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'5'%20y%3D'4'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'6'%20y%3D'4'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'7'%20y%3D'4'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'8'%20y%3D'4'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'9'%20y%3D'4'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'10'%20y%3D'4'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'11'%20y%3D'4'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'12'%20y%3D'4'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'13'%20y%3D'4'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'0'%20y%3D'5'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'1'%20y%3D'5'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'2'%20y%3D'5'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'3'%20y%3D'5'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'4'%20y%3D'5'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'5'%20y%3D'5'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'6'%20y%3D'5'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'7'%20y%3D'5'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'8'%20y%3D'5'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'9'%20y%3D'5'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'10'%20y%3D'5'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'11'%20y%3D'5'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'12'%20y%3D'5'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'13'%20y%3D'5'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'0'%20y%3D'6'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'1'%20y%3D'6'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'2'%20y%3D'6'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'3'%20y%3D'6'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'4'%20y%3D'6'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'5'%20y%3D'6'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'6'%20y%3D'6'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'7'%20y%3D'6'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'8'%20y%3D'6'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'9'%20y%3D'6'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'10'%20y%3D'6'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'11'%20y%3D'6'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'12'%20y%3D'6'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'13'%20y%3D'6'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'0'%20y%3D'7'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'1'%20y%3D'7'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'2'%20y%3D'7'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'3'%20y%3D'7'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'4'%20y%3D'7'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'5'%20y%3D'7'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'6'%20y%3D'7'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'7'%20y%3D'7'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'8'%20y%3D'7'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'9'%20y%3D'7'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'10'%20y%3D'7'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'11'%20y%3D'7'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'12'%20y%3D'7'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'13'%20y%3D'7'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'0'%20y%3D'8'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'1'%20y%3D'8'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'2'%20y%3D'8'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'3'%20y%3D'8'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'4'%20y%3D'8'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'5'%20y%3D'8'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'6'%20y%3D'8'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'7'%20y%3D'8'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'8'%20y%3D'8'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'9'%20y%3D'8'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'10'%20y%3D'8'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'11'%20y%3D'8'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'12'%20y%3D'8'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'13'%20y%3D'8'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'0'%20y%3D'9'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'1'%20y%3D'9'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'2'%20y%3D'9'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'3'%20y%3D'9'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'4'%20y%3D'9'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'5'%20y%3D'9'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'6'%20y%3D'9'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'7'%20y%3D'9'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'8'%20y%3D'9'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'9'%20y%3D'9'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'10'%20y%3D'9'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'11'%20y%3D'9'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'12'%20y%3D'9'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'13'%20y%3D'9'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'1'%20y%3D'10'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'2'%20y%3D'10'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'3'%20y%3D'10'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'4'%20y%3D'10'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'5'%20y%3D'10'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'6'%20y%3D'10'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'7'%20y%3D'10'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'8'%20y%3D'10'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'9'%20y%3D'10'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'10'%20y%3D'10'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'11'%20y%3D'10'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'12'%20y%3D'10'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'1'%20y%3D'11'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'2'%20y%3D'11'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'3'%20y%3D'11'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'4'%20y%3D'11'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'5'%20y%3D'11'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'6'%20y%3D'11'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'7'%20y%3D'11'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'8'%20y%3D'11'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'9'%20y%3D'11'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'10'%20y%3D'11'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'11'%20y%3D'11'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'12'%20y%3D'11'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'2'%20y%3D'12'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'3'%20y%3D'12'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'4'%20y%3D'12'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'5'%20y%3D'12'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'6'%20y%3D'12'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'7'%20y%3D'12'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'8'%20y%3D'12'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'9'%20y%3D'12'%20width%3D'1'%20height%3D'1'%20fill%3D'%23f5a524'%2F%3E%3Crect%20x%3D'10'%20y%3D'12'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'11'%20y%3D'12'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'4'%20y%3D'13'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'5'%20y%3D'13'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'6'%20y%3D'13'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'7'%20y%3D'13'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'8'%20y%3D'13'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3Crect%20x%3D'9'%20y%3D'13'%20width%3D'1'%20height%3D'1'%20fill%3D'%233b6cf6'%2F%3E%3C%2Fsvg%3E\")) center/100% 100% no-repeat;image-rendering:pixelated;color:var(--well,#05060a);font:400 16px 'Press Start 2P',ui-monospace,monospace;cursor:pointer;}.ds-disc.up{margin-bottom:26px;}.ds-disc:active{transform:translateY(var(--px,3px));color:var(--ink,#f7f4ea);}"
+    },
+    {
+      "name": "Press start",
+      "kind": "custom",
+      "refersTo": "option",
+      "description": "The title's call to action: B-coloured words that blink on a stepped loop.",
+      "html": "<button class=\"ds-press\" type=\"button\">PRESS START</button>",
+      "css": ".ds-press{padding:12px 16px;font:400 16px 'Press Start 2P',ui-monospace,monospace;letter-spacing:.08em;color:var(--pb,#f5a524);background:none;border:0;cursor:pointer;animation:ds-blink 1.06s steps(1) infinite;}@keyframes ds-blink{50%{opacity:0;}}@media (prefers-reduced-motion:reduce){.ds-press{animation:none;}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Console Screen",
+    "overview": "Every screen is a framed pixel screen on a near-black ground, steered by a cursor. The level's two-colour palette owns the whole screen: frames, plates, the logo band, the touch pads, the blocks and the ground tint all recolour together when the level changes. The page is a game that happens to run in a browser, not a site about one: menus are words and an arrow, and the only chrome is the frame.\n\nDensity is low and centred in menus (one column, one question per screen) and tight and instrumented in the match (two wells, stat boxes, a lead meter). One typeface, one bitmap grid, flat colour layers; nothing is blurred, rounded or glowing. Motion is split in two grammars: eased slides for layout, stepped on/off for anything made of pixels.",
+    "keyCharacteristics": [
+      "The level palette (A, B, ground, frame, pad disc) is the only chroma; neutrals and win/lose carry the rest.",
+      "Press Start 2P for every word, at weight 400, with no smoothing.",
+      "Frames are 9x9 pixel border-images, not CSS borders or radii.",
+      "Menu options are bare words with a pixel arrow cursor; hover and focus both move the cursor.",
+      "Everything is sized in multiples of one pixel unit (`--px`: 3px, 2px on phones)."
+    ],
+    "rules": [
+      {
+        "name": "The Palette Owns the Screen Rule",
+        "body": "Components read --pa, --pb, --frame and --btn; they never hard-code a hue. A new colour in a component is a bug unless it is a neutral or win/lose.",
+        "section": "colors"
+      },
+      {
+        "name": "The Lead Colour Rule",
+        "body": "Green and coral mean ahead and behind, and appear only where the lead is shown. They are not accents.",
+        "section": "colors"
+      },
+      {
+        "name": "The Block Style Rule",
+        "body": "I, O, T are a white core in A; J, L are solid A; S, Z are solid B. Highlights are a 1-pixel shine at the top left of a 7x7 body on an 8x8 grid.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Face Rule",
+        "body": "Any new word is Press Start 2P. No system display face, no italics, no bold.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Layer Rule",
+        "body": "Separate things with another flat colour or a pixel line. If a new element needs a shadow to read, change its colour layer instead.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** colour new accents from `--pa` / `--pb` and let `applyPalette` drive them, so they follow the level.",
+      "**Do** build new frames, plates and cards from `.frame` and size every dimension as a multiple of `--px`.",
+      "**Do** keep menus to words plus a cursor; promote a single action to the primary plate.",
+      "**Do** author new icons as bitmaps in `currentColor`, 7 px tall where possible.",
+      "**Do** give any new animation a reduced-motion path, and use `steps(1)` for pixel-built motion.",
+      "**Do** show state with a mark (star, pip, meter) before adding text."
+    ],
+    "donts": [
+      "**Don't** use border-radius, gradients, blur, glow or an elevation shadow.",
+      "**Don't** add a second typeface, a bold, or type below the 10px label size.",
+      "**Don't** hard-code a hue in a component, or use win green and lose coral as decoration.",
+      "**Don't** add button chrome, tabs or a card grid to menus; options stay bare words.",
+      "**Don't** use the Tetris name, logo or artwork, or copy NES palettes or screens: the ten pairs are original."
+    ]
+  }
+}

@@ -3,70 +3,144 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#0a101b" />
-    <meta name="description" content="Classic block stacking in the browser. Play solo or challenge Fallgorithm, an AI that plays it." />
+    <meta name="theme-color" content="#0e1426" />
+    <meta name="description" content="Classic block stacking in the browser with NES timing. Play solo or challenge Fallgorithm, an AI that plays it, on the same pieces as you." />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <title>Block Stack Arena</title>
   </head>
   <body>
     <main id="app">
-      <section id="menu" class="screen">
-        <header class="title">
-          <h1>BLOCK STACK <span>ARENA</span></h1>
-          <p>Classic block stacking with NES timing. Play solo, or take on Fallgorithm, an AI built to play it, on the same pieces as you.</p>
-        </header>
-        <div id="challenge" class="banner" hidden></div>
-        <button id="daily" class="daily" type="button"></button>
-        <nav id="modes" class="tabs" aria-label="Mode"></nav>
-        <p id="goal" class="goal"></p>
-        <div class="row">
-          <span class="label">Start level</span>
-          <div id="levels" class="tabs small"></div>
-        </div>
-        <div id="bots" class="bots"></div>
-        <div class="actions">
-          <button id="start" class="primary" type="button">Start</button>
-          <button id="watch" type="button">Watch this bot play</button>
-        </div>
-        <footer class="help">
-          <span><kbd>←</kbd><kbd>→</kbd> move</span>
-          <span><kbd>↓</kbd> soft drop</span>
-          <span><kbd>X</kbd>/<kbd>↑</kbd> rotate right</span>
-          <span><kbd>Z</kbd> rotate left</span>
-          <span><kbd>P</kbd> pause</span>
-          <span>Gamepads and touch work too.</span>
-        </footer>
+      <section id="title" class="screen" aria-labelledby="title-name">
+        <h1 id="title-name" class="sr-only">Block Stack Arena</h1>
+        <div class="logo-well"><canvas id="logo" aria-hidden="true"></canvas></div>
+        <div class="band"><span>ARENA</span></div>
+        <p class="tagline">Classic stacking with NES timing.<br />Play solo, or take on an AI.</p>
+        <button id="press-start" class="press-start" type="button" data-nav>PRESS START</button>
       </section>
 
-      <section id="arena" class="screen" hidden>
-        <div class="hud">
-          <button id="quit" type="button" title="Back to menu">✕</button>
-          <div class="status">
-            <div id="status-title"></div>
-            <div id="status-main"></div>
-            <div class="lead"><div id="lead-bar"></div></div>
-          </div>
-          <div class="hud-buttons">
-            <button id="speed" type="button" hidden>1×</button>
-            <button id="pause" type="button" title="Pause (P)">❚❚</button>
-            <button id="mute" type="button" title="Sound"></button>
+      <section id="challenged" class="screen" hidden aria-labelledby="challenged-head">
+        <h2 id="challenged-head" class="plate">CHALLENGE!</h2>
+        <div class="frame card-body">
+          <p id="challenge-text" class="challenge-text"></p>
+          <p id="challenge-match" class="detail"></p>
+          <div class="choices">
+            <button id="accept" class="option big primary" type="button" data-nav>ACCEPT</button>
+            <button id="decline" class="option" type="button" data-nav>NOT NOW</button>
           </div>
         </div>
-        <div id="boards" class="boards"></div>
-        <div id="touch" class="touch">
-          <div class="pad">
-            <button data-button="left" type="button" aria-label="Left">◀</button>
-            <button data-button="down" type="button" aria-label="Soft drop">▼</button>
-            <button data-button="right" type="button" aria-label="Right">▶</button>
+      </section>
+
+      <section id="menu" class="screen" hidden aria-labelledby="menu-head">
+        <h2 id="menu-head" class="plate">MAIN MENU</h2>
+        <nav class="frame card-body options" aria-label="Main menu">
+          <button class="option big" type="button" data-nav data-go="solo">
+            <b>SOLO</b><small>Endless. Pick any start level.</small>
+          </button>
+          <button class="option big" type="button" data-nav data-go="vs-type">
+            <b>VS AI</b><small>Race a bot on the same pieces.</small>
+          </button>
+          <button id="menu-daily" class="option big" type="button" data-nav data-go="daily">
+            <b>DAILY</b><small></small>
+          </button>
+        </nav>
+        <div id="controls" class="controls" aria-label="Controls"></div>
+      </section>
+
+      <section id="solo" class="screen" hidden aria-labelledby="solo-head">
+        <h2 id="solo-head" class="plate">LEVEL</h2>
+        <div class="frame card-body">
+          <div id="level-grid" class="level-grid" role="group" aria-label="Start level"></div>
+          <p id="level-note" class="detail"></p>
+        </div>
+        <div class="frame card-body">
+          <h3 class="label">YOUR BEST</h3>
+          <ol id="best-list" class="best-list"></ol>
+        </div>
+      </section>
+
+      <section id="vs-type" class="screen" hidden aria-labelledby="vs-type-head">
+        <h2 id="vs-type-head" class="plate">GAME TYPE</h2>
+        <div id="mode-list" class="frame card-body options"></div>
+      </section>
+
+      <section id="vs-bot" class="screen wide" hidden aria-labelledby="vs-bot-head">
+        <h2 id="vs-bot-head" class="plate">OPPONENT</h2>
+        <div class="bot-layout">
+          <div id="bot-list" class="frame card-body bot-list" role="group" aria-label="Opponents"></div>
+          <div class="frame card-body bot-detail">
+            <div class="preview-well"><canvas id="preview" aria-hidden="true"></canvas></div>
+            <div class="bot-info">
+              <div class="bot-head">
+                <h3 id="bot-name" class="bot-title"></h3>
+                <p id="bot-typical" class="detail hot"></p>
+                <p id="bot-live" class="detail muted" aria-hidden="true"><span id="live-lines"></span><span id="live-score"></span></p>
+              </div>
+              <p id="bot-blurb" class="detail"></p>
+              <div class="level-pick" role="group" aria-label="Level">
+                <span class="label">LEVEL</span>
+                <div id="bot-levels" class="segments"></div>
+              </div>
+              <div class="choices">
+                <button id="vs-start" class="option big primary" type="button" data-nav>START</button>
+                <button id="vs-watch" class="option" type="button" data-nav>WATCH IT PLAY</button>
+              </div>
+            </div>
           </div>
-          <div class="pad">
+        </div>
+      </section>
+
+      <section id="daily" class="screen" hidden aria-labelledby="daily-head">
+        <h2 id="daily-head" class="plate">DAILY</h2>
+        <div class="frame card-body">
+          <p id="daily-match" class="daily-match"></p>
+          <p id="daily-detail" class="detail"></p>
+          <p id="daily-status" class="detail hot"></p>
+          <div class="choices">
+            <button id="daily-start" class="option big primary" type="button" data-nav>START</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="arena" class="screen" hidden aria-label="Match">
+        <header class="hud">
+          <button id="quit" class="icon-btn" type="button" aria-label="Menu" title="Menu"></button>
+          <div class="status">
+            <div id="status-title" class="status-title"></div>
+            <div id="status-main" class="status-main"></div>
+            <div id="lead" class="lead" aria-hidden="true"></div>
+          </div>
+          <div class="hud-buttons">
+            <button id="speed" class="icon-btn text" type="button" hidden>1×</button>
+            <button id="pause" class="icon-btn" type="button" aria-label="Pause (P)" title="Pause (P)"></button>
+            <button id="mute" class="icon-btn" type="button" aria-label="Sound" title="Sound"></button>
+          </div>
+        </header>
+        <div id="boards" class="boards"></div>
+        <div id="touch" class="pad-bar">
+          <div class="dpad">
+            <span class="dpad-up" aria-hidden="true"></span>
+            <button data-button="left" type="button" aria-label="Left"></button>
+            <span class="dpad-hub" aria-hidden="true"></span>
+            <button data-button="right" type="button" aria-label="Right"></button>
+            <button data-button="down" type="button" aria-label="Soft drop"></button>
+          </div>
+          <button id="touch-start" class="start-plate" type="button" aria-label="Pause">START</button>
+          <div class="ab">
             <button data-button="ccw" type="button" aria-label="Rotate left">B</button>
             <button data-button="cw" type="button" aria-label="Rotate right">A</button>
           </div>
         </div>
         <div id="overlay" class="overlay" hidden></div>
       </section>
+
+      <div id="menu-chrome" class="menu-chrome" hidden>
+        <button id="back" class="icon-btn" type="button" aria-label="Back (Esc)" title="Back (Esc)"></button>
+        <button id="menu-mute" class="icon-btn" type="button" aria-label="Sound" title="Sound"></button>
+      </div>
     </main>
+    <p id="toast" class="frame toast" role="status" hidden></p>
+    <canvas id="wipe" class="fx-layer" hidden aria-hidden="true"></canvas>
+    <canvas id="fx" class="fx-layer" hidden aria-hidden="true"></canvas>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

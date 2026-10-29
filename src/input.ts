@@ -45,9 +45,18 @@ function gamepad(): number {
   return bits;
 }
 
+let suppressed = 0;
+
+/** Ignores the buttons held right now until each is released (after resuming, say). */
+export function suppressHeld(): void {
+  suppressed = keys | touch | gamepad();
+}
+
 /** The buttons held right now. */
 export function held(): number {
   let bits = keys | touch | gamepad();
+  suppressed &= bits;
+  bits &= ~suppressed;
   if ((bits & (LEFT | RIGHT)) === (LEFT | RIGHT)) bits &= ~(LEFT | RIGHT);
   return bits;
 }
