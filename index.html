@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0a101b" />
+    <meta name="description" content="Classic block stacking in the browser. Play solo or challenge Fallgorithm, an AI that plays it." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>Block Stack Arena</title>
+  </head>
+  <body>
+    <main id="app">
+      <section id="menu" class="screen">
+        <header class="title">
+          <h1>BLOCK STACK <span>ARENA</span></h1>
+          <p>Classic block stacking with NES timing. Play solo, or take on Fallgorithm, an AI built to play it, on the same pieces as you.</p>
+        </header>
+        <div id="challenge" class="banner" hidden></div>
+        <button id="daily" class="daily" type="button"></button>
+        <nav id="modes" class="tabs" aria-label="Mode"></nav>
+        <p id="goal" class="goal"></p>
+        <div class="row">
+          <span class="label">Start level</span>
+          <div id="levels" class="tabs small"></div>
+        </div>
+        <div id="bots" class="bots"></div>
+        <div class="actions">
+          <button id="start" class="primary" type="button">Start</button>
+          <button id="watch" type="button">Watch this bot play</button>
+        </div>
+        <footer class="help">
+          <span><kbd>←</kbd><kbd>→</kbd> move</span>
+          <span><kbd>↓</kbd> soft drop</span>
+          <span><kbd>X</kbd>/<kbd>↑</kbd> rotate right</span>
+          <span><kbd>Z</kbd> rotate left</span>
+          <span><kbd>P</kbd> pause</span>
+          <span>Gamepads and touch work too.</span>
+        </footer>
+      </section>
+
+      <section id="arena" class="screen" hidden>
+        <div class="hud">
+          <button id="quit" type="button" title="Back to menu">✕</button>
+          <div class="status">
+            <div id="status-title"></div>
+            <div id="status-main"></div>
+            <div class="lead"><div id="lead-bar"></div></div>
+          </div>
+          <div class="hud-buttons">
+            <button id="speed" type="button" hidden>1×</button>
+            <button id="pause" type="button" title="Pause (P)">❚❚</button>
+            <button id="mute" type="button" title="Sound"></button>
+          </div>
+        </div>
+        <div id="boards" class="boards"></div>
+        <div id="touch" class="touch">
+          <div class="pad">
+            <button data-button="left" type="button" aria-label="Left">◀</button>
+            <button data-button="down" type="button" aria-label="Soft drop">▼</button>
+            <button data-button="right" type="button" aria-label="Right">▶</button>
+          </div>
+          <div class="pad">
+            <button data-button="ccw" type="button" aria-label="Rotate left">B</button>
+            <button data-button="cw" type="button" aria-label="Rotate right">A</button>
+          </div>
+        </div>
+        <div id="overlay" class="overlay" hidden></div>
+      </section>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
